@@ -1,0 +1,202 @@
+<body>
+
+  <div class="container">
+  
+	<style>
+		h2 {
+			border: 1px solid black;
+			border-radius: 5px;
+			font-family: "Segoe UI",Arial,sans-serif;
+			background-color: blue;
+			color: white;
+			text-align: center-left;
+			padding: 10px;
+		}
+		body {
+			font-family: "Segoe UI",Arial,sans-serif;
+		}
+		
+	</style>
+  
+   <header>
+  {{> loginButtons}}
+	<br/>
+	<h2>
+		<center><img src="7habits0.png" width="160px"/></center><br/>
+		<center title="7 Habits of Highly Effective People - Stephen Covey.">A personal 7 habits activity manager</center>
+	</h2>
+
+
+	{{#if currentUser}}
+        <label class="hide-archived">
+          <input type="checkbox" />
+            hide the ticked items (items I've practiced recently)
+        </label>
+      {{/if}}
+    </header>
+
+    <header>
+      {{#if currentUser}}
+      <h2>1. Be Proactive</h2>
+      (choose rather than must do) eg: I want to be more present and involved in my family's happiness.
+ 
+      <form class="new-proactive">
+        <input type="text" name="text" placeholder="Type to add new item" />
+      </form>
+
+      {{/if}}
+    </header>
+ 
+    <ul>
+      {{#if currentUser}}
+      {{#each proactives}}
+        {{> proactive}}
+      {{/each}}
+      {{/if}}
+    </ul>
+
+
+
+    <header>
+      {{#if currentUser}}
+      <h2>2. Begin With the End in mind</h2>
+      list recent examples of this in your life.
+ 
+      <form class="new-beginEndInMind">
+        <input type="text" name="text" placeholder="Type to add new item" />
+      </form>
+      {{/if}}
+
+    </header>
+ 
+    <ul>
+      {{#if currentUser}}
+      {{#each beginEndInMinds}}
+        {{> beginEndInMind}}
+      {{/each}}
+      {{/if}}
+    </ul>
+
+
+
+    <header>
+      {{#if currentUser}}
+	  <h2>3. Put First things first</h2>
+	   (important-urgent / important-not-urgent / urgent-not-imporant / not-urgent-or-important)
+      list recent examples of this in your life.
+ 
+      <form class="new-putFirstThingsFirst">
+        <input type="text" name="text" placeholder="Type to add new item" />
+      </form>
+
+      {{/if}}
+    </header>
+ 
+    <ul>
+      {{#if currentUser}}
+      {{#each putFirstThingsFirsts}}
+        {{> putFirstThingsFirst}}
+      {{/each}}
+      {{/if}}
+    </ul>
+
+
+
+    <header>
+      {{#if currentUser}}
+	  <h2>4. Think Win-win</h2>
+      list recent examples of this in your life.
+ 
+      <form class="new-winWin">
+        <input type="text" name="text" placeholder="Type to add new item" />
+      </form>
+
+      {{/if}}
+    </header>
+ 
+    <ul>
+      {{#if currentUser}}
+      {{#each winWins}}
+        {{> winWin}}
+      {{/each}}
+      {{/if}}
+    </ul>
+
+
+
+
+    <header>
+      {{#if currentUser}}
+	  <h2>5. Seek First to Understand then be understood</h2>
+      list recent examples of this in your life.
+
+      <form class="new-seekToUnderstand">
+        <input type="text" name="text" placeholder="Type to add new item" />
+      </form>
+      {{/if}}
+    </header>
+ 
+    <ul>
+      {{#if currentUser}}
+      {{#each seekToUnderstands}}
+        {{> seekToUnderstand}}
+      {{/each}}
+      {{/if}}
+    </ul>
+
+
+
+
+    <header>
+      {{#if currentUser}}
+	  <h2>6. Synergise</h2> 
+	  Teamwork with Optimistic, emotionally charged individuals. List recent examples of this in your life.
+ 
+      <form class="new-synergize">
+        <input type="text" name="text" placeholder="Type to add new item" />
+      </form>
+
+      {{/if}}
+    </header>
+ 
+    <ul>
+      {{#if currentUser}}
+      {{#each synergizes}}
+        {{> synergize}}
+      {{/each}}
+      {{/if}}
+    </ul>
+
+
+
+
+
+    <header>
+      {{#if currentUser}}
+   	  <h2>7. Sharpen the saw </h2>
+      (a) exercise for wellbeing. (b) mind- exercise to sharpen intellectual capabilities. (c) spirit - meditate and inner reflection (d) heart - care for important relationships.
+ 
+      <form class="new-sharpen">
+        <input type="text" name="text" placeholder="Type to add new item" />
+      </form>
+
+      {{/if}}
+    </header>
+ 
+    <ul>
+      {{#if currentUser}}
+      {{#each sharpens}}
+        {{> sharpen}}
+      {{/each}}
+      {{/if}}
+    </ul>
+
+  </div>  
+
+
+</body>
+
+	
+
+
+ 

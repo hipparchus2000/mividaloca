@@ -1,0 +1,9 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+		"ROOT_URL": "http://www.mividaloca.co.uk/",
+		"DEPLOY_HOSTNAME" : "galaxy.meteor.com",
+		"MONGO_URL": "mongodb://chrystal:abc123def!@ds053972.mlab.com:53972/sevenhabits"
+    }
+  }
+}
